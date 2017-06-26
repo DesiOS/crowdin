@@ -1,8 +1,8 @@
 # crowdin-mm.yaml
 #
-# Crowdin configuration file for PureNexus
+# Crowdin configuration file for ViperOS
 #
-# Copyright (C) 2016 The PureNexus Project
+# Copyright (C) 2017 ViperOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,15 +16,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-api_key: 012345678900987654321
-base_path: /home/nate/android/aosp/purenexuscmte
-project_identifier: the-purenexus-project
+api_key: XXX
+base_path: /home/henrique/roms/viper
+project_identifier: viperos
 preserve_hierarchy: true
 
 files:
-# Default for PureNexus
+# Default for ViperOS
   -
-    source:      '/**/values/purenexus_strings.xml'
+    source:      '/**/values/viper_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: &anchor
       android_code:
@@ -91,13 +91,45 @@ files:
         vi: vi
         zu: zu
 
+ # OmniJaws
   -
-    source:      '/frameworks/base/packages/DocumentsUI/res/values/custom_strings.xml'
+    source:      '/packages/services/OmniJaws/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
+ # OmniStyle
   -
-    source:      '/packages/apps/PureNexusSettings/res/values/strings.xml'
+    source:      '/packages/apps/OmniStyle/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+# MusicFX
+  -
+    source:      '/packages/apps/MusicFX/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+# Venom
+  -
+    source:      '/packages/apps/Venom/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+# VPapers
+  -
+    source:      '/packages/apps/VPapers/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+# ViperOTA
+  -
+    source:      '/packages/apps/ViperOTA/res/values/custom_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+# Launcher3
+  -
+    source:      '/packages/apps/Launcher3/res/values/custom_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
