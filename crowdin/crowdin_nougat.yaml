@@ -16,8 +16,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-api_key: XXX
-base_path: /home/henrique/roms/viper
+api_key: <%= ENV['CROWDIN_API_KEY'] %>
+base_path: <%= ENV['CROWDIN_BASE_PATH'] %>
 project_identifier: viperos
 preserve_hierarchy: true
 
@@ -96,6 +96,11 @@ files:
     source:      '/packages/services/OmniJaws/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
+ # OmniJaws
+  -
+    source:      '/packages/services/OmniJaws/res/values/weather_conditions_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
 
  # OmniStyle
   -
@@ -115,9 +120,9 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-# VPapers
+# ViperOTA
   -
-    source:      '/packages/apps/VPapers/res/values/strings.xml'
+    source:      '/packages/apps/ViperOTA/res/values/strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
@@ -127,9 +132,38 @@ files:
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
-# VLauncher
+# ViperOTA
   -
-    source:      '/packages/apps/VLauncher/res/values/custom_strings.xml'
+    source:      '/packages/apps/ViperOTA/res/values/plurals.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
+# FMRadio
+  -
+    source:      '/packages/apps/FMRadio/res/values/custom_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+# ContactsProvider
+  -
+    source:      '/packages/providers/ContactsProvider/res/values/custom_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+# Messaging
+  -
+    source:      '/packages/apps/Messaging/res/values/custom_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+# Dialer
+  -
+    source:      '/packages/apps/Dialer/InCallUI/res/values/custom_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+ # Theme Chooser
+  -
+    source:      '/vendor/viper/colorengine/themechooser/res/values/viper_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
